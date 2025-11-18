@@ -1,0 +1,37 @@
+accum_batch: 1
+amsgrad: false
+atom_feat_dim: 16
+batch_size: 128
+conf: null
+cutoff: 5.0
+dataset_root: /dataset_path/
+detect_anomaly: false
+edge_feat_dim: 5
+eps_min: 0.001
+eval_freq: 1.0
+fisher_dsm: false   # set to false for GSM
+ode_training: false # set to true for ODE training (flow-matching, stochastic interpolant)
+gpus: 1
+grad_clip_val: 10.0
+id: 300
+load_ckpt: ''
+lr: 0.0005
+lr_cooldown: 5
+lr_factor: 0.75
+lr_frequency: 5
+lr_patience: 20
+noise_schedule: linear-time
+num_epochs: 300
+num_layers: 5
+num_rbfs: 20
+num_workers: 3
+precision: 32
+remove_hs: false
+save_dir: /path/to_save/
+sdim: 128
+seed: 42
+timesteps: 100
+use_cross_product: false
+vdim: 32
+vector_aggr: mean
+weight_decay: 1.0e-06

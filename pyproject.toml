@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sism"
+description = "A research module for symmetry-induced score matching"
+readme = "README.md"
+requires-python = ">=3.10.0"
+authors = [
+    {name = "Marco Bertolini", email = "marco.bertolini@pfizer.com"},
+    {name = "Tuan Le", email = "tuan.le@pfizer.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Utilities",
+]
+dynamic = ["version"]
+
+dependencies = [
+    "torch",
+    "numpy",
+    "matplotlib",
+    "tqdm",
+    "pytorch-lightning",
+    "tensorboard",
+    # Add other dependencies as needed
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sism*"]
+
+[tool.setuptools_scm]
+# Enable setuptools_scm for dynamic versioning
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+
+[project]
+license = {text = "Apache-2.0"}

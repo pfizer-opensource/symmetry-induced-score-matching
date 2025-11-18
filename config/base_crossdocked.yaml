@@ -1,0 +1,47 @@
+accum_batch: 1
+amsgrad: false
+atom_feat_dim: 16
+batch_size: 32
+conf: null
+cutoff: 5.0
+dataset_root: /dataset_path/
+detect_anomaly: false
+edge_feat_dim: 5
+eps_min: 0.001
+eval_freq: 1.0
+gpus: 1
+grad_clip_val: 10.0
+id: 0
+load_ckpt: ''
+lr: 0.0005
+lr_cooldown: 5
+lr_factor: 0.75
+lr_frequency: 5
+lr_patience: 20
+noise_schedule: cosine
+num_epochs: 300
+num_layers: 5
+global_translations: true # set to true if global translations should be modeled, only for gsm and rsgm models as of now
+update_coords: true 
+update_edges: true
+num_rbfs: 20
+remove_hs: true
+num_workers: 4
+precision: 32
+save_dir: /path/to_save/
+use_pcs: false
+sdim: 128
+vdim: 32
+edim: 16
+seed: 42
+timesteps: 100
+use_cross_product: false
+vector_aggr: mean
+weight_decay: 1.0e-06
+# dead args to carry on from old code
+joint_property_prediction: true
+regression_property: docking_score
+property_training: false
+dataset: crossdocked
+model: gsm # gsm # rsgm # fisher_bridge
+regression_target: grad # for fisher_bridge
